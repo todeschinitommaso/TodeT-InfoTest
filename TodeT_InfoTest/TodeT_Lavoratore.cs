@@ -37,5 +37,21 @@ namespace TodeT_InfoTest
         {
             Esperienze = esperienze;
         }
+
+        //METODO PUNTEGGIO
+        public override int punteggio()
+        {
+            int a = Esperienze * 20;
+            return a;
+        }
+
+        //METODO ISIDONEO
+        public override bool isIdoneo()
+        {
+            if (punteggio() >= 60)
+                return true;
+
+            return false;
+        }
     }
 }
