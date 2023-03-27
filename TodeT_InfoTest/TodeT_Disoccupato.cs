@@ -59,7 +59,7 @@ namespace TodeT_InfoTest
         }
 
         //COSTRUTORE CON PARAMETRI
-        public TodeT_Disoccupato(int voto, bool lode)
+        public TodeT_Disoccupato(int voto, bool lode, int matricola, string nome) : base(matricola, nome)
         {
             Voto = voto;
             Lode = lode;
@@ -72,7 +72,7 @@ namespace TodeT_InfoTest
             if (Lode == true)
                 a += 5;
 
-            return a;
+            return a;   
         }
 
         //METODO ISIDONEO
