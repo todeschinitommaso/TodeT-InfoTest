@@ -8,8 +8,8 @@ namespace TodeT_InfoTest
 {
     internal class TodeT_Candidato
     {
-        public int TodeT_matricola;
+        private int TodeT_matricola;
 
-        public string TodeT_nome;
+        private string TodeT_nome;
     }
 }
