@@ -107,5 +107,20 @@ namespace TodeT_InfoTest
                 return false;
         }
 
+        //COMPARETO
+        public int CompareTo(TodeT_Disoccupato a)
+        {
+            if (a == null)
+                return 1;
+
+            if (this.punteggio() == a.punteggio())
+                return 0;
+
+            else if (this.punteggio() < a.punteggio())
+                return -1;
+
+            else
+                return 1;
+        }
     }
 }

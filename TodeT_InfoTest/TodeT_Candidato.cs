@@ -78,13 +78,19 @@ namespace TodeT_InfoTest
         }
 
         //COMPARETO
-        public bool CompareTo(TodeT_Candidato a)
+        public int CompareTo(TodeT_Candidato a)
         {
+            if (a == null)
+                return 1;
+
             if (this.punteggio() == a.punteggio())
-                return true;
+                return 0;
+
+            else if (this.punteggio() < a.punteggio())
+                return -1;
 
             else
-                return false;
+                return 1;
         }
 
         //HASHCODE
