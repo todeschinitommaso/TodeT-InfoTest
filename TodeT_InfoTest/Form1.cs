@@ -52,5 +52,33 @@ namespace TodeT_InfoTest
             }
         }
 
+        //ELIMINA
+        public void Elimina(int nmatricola)
+        {
+            for (int i = 0; i < lista.Count; i++)
+            {
+                if (lista[i].Matricola == nmatricola)
+                {
+                    lista[i] = null;
+                }
+            }
+        }
+
+        //VISUALIZZA IDONEI
+        public string[] VisIdonei()
+        {
+            string[] s = new string[999];
+            int n = 0;
+            foreach (TodeT_Candidato a in lista)
+            {
+                bool b = a.isIdoneo();
+                if(b == true)
+                {
+                    s[n] = a.ToString();
+                    n++;
+                }
+            }
+            return s;
+        }
     }
 }
