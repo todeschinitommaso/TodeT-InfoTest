@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TodeT_InfoTest
 {
-    internal class TodeT_Candidato
+    abstract class TodeT_Candidato
     {
         private int _TodeT_matricola;
 
@@ -51,15 +51,7 @@ namespace TodeT_InfoTest
         }
 
         //METODO ASTRATTO ISIDONEO
-        public static bool isIdoneo(bool a)
-        {
-            return a;
-        }
-
-        //METODO ASTRATTO PUNTEGGIO
-        public static int punteggio(int i)
-        {
-            return i;
-        }
+        public abstract bool isIdoneo();
+        public abstract int punteggio();
     }
 }
