@@ -35,7 +35,7 @@ namespace TodeT_InfoTest
         public TodeT_Candidato(int matricola)
         {
             Matricola = matricola;
-            Nome=null;
+            Nome = null;
         }
         public TodeT_Candidato(string nome)
         {
@@ -46,12 +46,53 @@ namespace TodeT_InfoTest
         //COSTRUTTORE CON DUE PARAMETRI
         public TodeT_Candidato(int matricola, string nome)
         {
-            Matricola=matricola;
+            Matricola = matricola;
             Nome = nome;
         }
 
         //METODO ASTRATTO
         public abstract bool isIdoneo();
         public abstract int punteggio();
+
+        //TOSTRING
+        public override string ToString()
+        {
+            string s = Matricola + ", " + Nome;
+            return s;
+        }
+
+        //EQUALS
+        public bool Equals(TodeT_Candidato a)
+        {
+            if (a == null)
+                return false;
+
+            if (this == a)
+                return true;
+
+            if (this.Matricola == a.Matricola || this.Nome == a.Nome)
+                return true;
+
+            else
+                return false;
+        }
+
+        //COMPARETO
+        public bool CompareTo(TodeT_Candidato a)
+        {
+            if (this.punteggio() == a.punteggio())
+                return true;
+
+            else
+                return false;
+        }
+
+        //HASHCODE
+        public override int GetHashCode()
+        {
+            return (Matricola, Nome).GetHashCode();
+        }
     }
 }
+
+

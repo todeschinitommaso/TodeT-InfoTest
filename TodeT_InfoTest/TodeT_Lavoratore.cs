@@ -53,5 +53,28 @@ namespace TodeT_InfoTest
 
             return false;
         }
+
+        //TOSTRING
+        public override string ToString()
+        {
+            string s = Matricola + ", " + Nome + ", " + Esperienze;
+            return s;
+        }
+
+        //EQUALS
+        public bool Equals(TodeT_Lavoratore a)
+        {
+            if (a == null)
+                return false;
+
+            if (this == a)
+                return true;
+
+            if (this.Matricola == a.Matricola || this.Nome == a.Nome || this.Esperienze == a.Esperienze)
+                return true;
+
+            else
+                return false;
+        }
     }
 }

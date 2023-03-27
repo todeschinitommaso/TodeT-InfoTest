@@ -83,5 +83,29 @@ namespace TodeT_InfoTest
 
             return false;
         }
+
+        //TOSTRING
+        public override string ToString()
+        {
+            string s = Matricola + ", " + Nome + ", " + Voto + ", " + Lode;
+            return s;
+        }
+
+        //EQUALS
+        public bool Equals(TodeT_Disoccupato a)
+        {
+            if (a == null)
+                return false;
+
+            if (this == a)
+                return true;
+
+            if (this.Matricola == a.Matricola || this.Nome == a.Nome || this.Voto == a.Voto || this.Lode == a.Lode)
+                return true;
+
+            else
+                return false;
+        }
+
     }
 }
